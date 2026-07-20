@@ -11,8 +11,6 @@
   --tagline: #999;
   --footer-text: #444;
   --footer-link: #666;
-  --android-color: #777;
-  --android-border: #333;
   --accent: #F97316;
   --accent-fibro: #F97316;
   --accent-spondy: #F97316;
@@ -29,8 +27,6 @@
     --tagline: #57534e;
     --footer-text: #a8a29e;
     --footer-link: #78716c;
-    --android-color: #78716c;
-    --android-border: #d4d0ce;
   }
 }
 
@@ -141,20 +137,6 @@ header.page-header h1 { font-size: 2rem; }
 .store-btn { display: inline-block; transition: opacity 0.15s; }
 .store-btn:hover { opacity: 0.8; }
 .store-btn img { height: 48px; display: block; }
-
-.store-btn.secondary {
-  display: inline-flex;
-  align-items: center;
-  background: transparent;
-  border: 1px solid var(--android-border);
-  color: var(--android-color);
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: 100px;
-  cursor: default;
-  height: 48px;
-}
 
 main {
   width: 100%;
@@ -290,6 +272,11 @@ article.post-body p { font-size: 0.95rem; color: var(--text-muted); line-height:
 article.post-body ul, article.post-body ol { margin: 0 0 16px 22px; }
 article.post-body li { font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 8px; }
 article.post-body a { color: var(--accent); text-decoration: underline; }
+article.post-body table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 0.85rem; }
+article.post-body th, article.post-body td { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+article.post-body th { color: var(--text-heading); font-weight: 600; }
+article.post-body td { color: var(--text-muted); }
+article.post-body h3 { font-size: 1.05rem; color: var(--text-heading); margin: 24px 0 8px; }
 article.post-body .app-callout {
   background: var(--bg-card);
   border: 1px solid var(--border);
