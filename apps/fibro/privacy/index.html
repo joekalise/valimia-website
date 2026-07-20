@@ -42,8 +42,8 @@
 
     <h3>2a. Account data</h3>
     <ul>
-      <li><strong>Email address</strong> — used to create and authenticate your account.</li>
-      <li><strong>Name / preferred name</strong> — optional, used to personalise the app.</li>
+      <li><strong>Email address:</strong> used to create and authenticate your account.</li>
+      <li><strong>Name / preferred name:</strong> optional, used to personalise the app.</li>
     </ul>
     <p>We collect this when you sign up with email/password, Apple Sign In, or Google Sign In.</p>
 
@@ -54,19 +54,19 @@
       <li>Current medications, pain locations, pain types</li>
       <li>Associated conditions (e.g. sleep disorder, IBS, restless legs, anxiety/depression)</li>
       <li>Morning stiffness duration, lifestyle challenges</li>
-      <li>Biological sex (optional — used to show relevant tracking options such as menstrual cycle logging)</li>
+      <li>Biological sex (optional, used to show relevant tracking options such as menstrual cycle logging)</li>
     </ul>
     <p>This data is used solely to personalise your experience and generate relevant AI insights.</p>
 
     <h3>2c. Daily tracking data</h3>
     <p>Logged by you each day:</p>
     <ul>
-      <li>Pain score (0–10), fatigue score (0–10), brain fog score (0–10)</li>
+      <li>Pain score (0-10), fatigue score (0-10), brain fog score (0-10)</li>
       <li>Morning stiffness, mood, free-text notes</li>
       <li>Medication adherence</li>
       <li>Diet quality and dietary triggers</li>
       <li>Exercise (whether you exercised, duration, type)</li>
-      <li>Period / menstrual cycle activity (for users who opt in — female users only)</li>
+      <li>Period / menstrual cycle activity (for users who opt in, female users only)</li>
     </ul>
 
     <h3>2d. Flare logs</h3>
@@ -76,7 +76,7 @@
     <p>Medication name, injection date, interval, lot number (optional), response rating (optional). Only relevant if you are on injectable treatments.</p>
 
     <h3>2f. Apple Health data (optional)</h3>
-    <p>If you connect Apple Health, we read — and only read — the following:</p>
+    <p>If you connect Apple Health, we only read the following:</p>
     <ul>
       <li>Step count</li>
       <li>Sleep duration and sleep stages (Core, Deep, REM)</li>
@@ -98,7 +98,7 @@
       <tr><td>Displaying your tracking history and trends</td><td>All tracking data you enter</td></tr>
       <tr><td>Generating personalised AI insights and chat responses</td><td>Health profile + tracking data + Apple Health data</td></tr>
       <tr><td>Sending your daily log reminder notification</td><td>Notification time preference</td></tr>
-      <tr><td>Processing subscription payments</td><td>Handled by RevenueCat (see below) — we do not see your card details</td></tr>
+      <tr><td>Processing subscription payments</td><td>Handled by RevenueCat (see below); we do not see your card details</td></tr>
       <tr><td>Deleting your account when requested</td><td>All data is deleted</td></tr>
     </table>
     <p><strong>We do not sell your data. We do not use your data for advertising. We do not share your data with third parties except as described in Section 5.</strong></p>
@@ -114,29 +114,29 @@
       <tr><td>Supabase</td><td>Database and authentication</td><td>All account and tracking data (encrypted at rest)</td><td>supabase.com/privacy</td></tr>
       <tr><td>Anthropic</td><td>AI insights and chat</td><td>Health profile excerpt + recent tracking data</td><td>anthropic.com/privacy</td></tr>
       <tr><td>RevenueCat</td><td>Subscription management</td><td>User ID, subscription status</td><td>revenuecat.com/privacy</td></tr>
-      <tr><td>Apple (HealthKit)</td><td>Health data reading</td><td>None — data flows from Apple Health to us, not the other way</td><td>apple.com/privacy</td></tr>
+      <tr><td>Apple (HealthKit)</td><td>Health data reading</td><td>None; data flows from Apple Health to us, not the other way</td><td>apple.com/privacy</td></tr>
     </table>
 
     <h2>6. Data storage and security</h2>
     <ul>
       <li>All data is stored in a Supabase database hosted in the EU West (Ireland) region.</li>
       <li>Data is encrypted at rest and in transit.</li>
-      <li>Row-level security policies ensure each user can only read and write their own data — no user can access another user's records.</li>
+      <li>Row-level security policies ensure each user can only read and write their own data; no user can access another user's records.</li>
       <li>Your authentication session is stored securely in your device's encrypted secure storage (not in plain AsyncStorage).</li>
     </ul>
 
     <h2>7. Data retention</h2>
-    <p>We retain your data for as long as your account is active. If you delete your account (via Profile → Delete Account), all data associated with your account — including your profile, all logs, flares, health data, and AI context — is permanently deleted from our database within 24 hours. This is irreversible.</p>
+    <p>We retain your data for as long as your account is active. If you delete your account (via Profile → Delete Account), all data associated with your account, including your profile, all logs, flares, health data, and AI context, is permanently deleted from our database within 24 hours. This is irreversible.</p>
 
     <h2>8. Your rights</h2>
     <p>Under GDPR and applicable data protection law, you have the right to:</p>
     <ul>
-      <li><strong>Access</strong> — request a copy of the data we hold about you</li>
-      <li><strong>Rectification</strong> — correct inaccurate data (you can do this directly in the app)</li>
-      <li><strong>Erasure</strong> — delete your account and all associated data (available in the app under Profile → Delete Account)</li>
-      <li><strong>Portability</strong> — request your data in a machine-readable format</li>
-      <li><strong>Restriction</strong> — ask us to restrict processing of your data</li>
-      <li><strong>Objection</strong> — object to certain types of processing</li>
+      <li><strong>Access:</strong> request a copy of the data we hold about you</li>
+      <li><strong>Rectification:</strong> correct inaccurate data (you can do this directly in the app)</li>
+      <li><strong>Erasure:</strong> delete your account and all associated data (available in the app under Profile → Delete Account)</li>
+      <li><strong>Portability:</strong> request your data in a machine-readable format</li>
+      <li><strong>Restriction:</strong> ask us to restrict processing of your data</li>
+      <li><strong>Objection:</strong> object to certain types of processing</li>
     </ul>
     <p>To exercise any of these rights, contact us at <a href="mailto:joseph.brockbank@gmail.com">joseph.brockbank@gmail.com</a>. We will respond within 30 days.</p>
 
