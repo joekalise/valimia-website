@@ -74,12 +74,10 @@ a { color: inherit; }
   color: var(--text-heading);
 }
 
-.brand .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  display: inline-block;
+.brand .brand-mark {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .site-nav .links {
