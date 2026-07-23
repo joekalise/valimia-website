@@ -365,7 +365,7 @@ main.wide { max-width: 880px; }
   font-family: inherit;
 }
 .contact-form button[type="submit"]:disabled { opacity: 0.6; cursor: default; }
-.form-status { font-size: 0.85rem; }
+.form-status { font-size: 0.85rem; margin-top: 12px; }
 .form-status.success { color: #16a34a; }
 .form-status.error { color: #dc2626; }
 
