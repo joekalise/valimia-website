@@ -260,6 +260,28 @@ main.wide { max-width: 880px; }
   margin-bottom: 20px;
 }
 
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: opacity 0.15s;
+}
+
+.prose-section > .btn { margin-top: 8px; }
+
+.btn:hover { opacity: 0.88; }
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .mission-statement {
   text-align: center;
   padding: 8px 0 40px;
@@ -334,7 +356,15 @@ main.wide { max-width: 880px; }
 .app-card .logo-mark { width: 56px; height: 56px; margin-bottom: 16px; border-radius: 16px; }
 .app-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--text-heading); margin-bottom: 6px; }
 .app-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px; }
-.app-card .cta { font-size: 0.8rem; font-weight: 600; color: var(--accent); }
+.app-card .cta {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
 
 /* Blog listing */
 .post-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
@@ -381,7 +411,17 @@ article.post-body .app-callout {
 article.post-body .app-callout img { width: 48px; height: 48px; border-radius: 14px; }
 article.post-body .app-callout .callout-text h4 { color: var(--text-heading); font-size: 0.95rem; margin-bottom: 4px; }
 article.post-body .app-callout .callout-text p { margin: 0; font-size: 0.82rem; }
-article.post-body .app-callout .callout-text a { font-weight: 600; }
+article.post-body .app-callout .callout-text a {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
 
 footer {
   width: 100%;
