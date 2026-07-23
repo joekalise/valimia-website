@@ -112,12 +112,10 @@
       status.textContent = '';
       status.className = 'form-status';
 
-      var data = Object.fromEntries(new FormData(form));
-
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(data),
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
       })
         .then(function (res) { return res.json(); })
         .then(function (result) {
@@ -134,7 +132,7 @@
           }
         })
         .catch(function () {
-          status.textContent = 'Something went wrong. Please try again, or email joseph.brockbank@gmail.com directly.';
+          status.textContent = 'Something went wrong. Please try again in a moment.';
           status.className = 'form-status error';
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send message';
