@@ -102,15 +102,15 @@
 
   <script>
     var form = document.getElementById('contact-form');
-    var status = document.getElementById('form-status');
+    var formStatus = document.getElementById('form-status');
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var submitBtn = form.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
-      status.textContent = '';
-      status.className = 'form-status';
+      formStatus.textContent = '';
+      formStatus.className = 'form-status';
 
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -122,18 +122,18 @@
           if (result.success) {
             form.reset();
             form.style.display = 'none';
-            status.textContent = "Thanks, your message has been sent. We'll get back to you soon.";
-            status.className = 'form-status success';
+            formStatus.textContent = "Thanks, your message has been sent. We'll get back to you soon.";
+            formStatus.className = 'form-status success';
           } else {
-            status.textContent = 'Something went wrong. Please try again in a moment.';
-            status.className = 'form-status error';
+            formStatus.textContent = 'Something went wrong. Please try again in a moment.';
+            formStatus.className = 'form-status error';
             submitBtn.disabled = false;
             submitBtn.textContent = 'Send message';
           }
         })
         .catch(function () {
-          status.textContent = 'Something went wrong. Please try again in a moment.';
-          status.className = 'form-status error';
+          formStatus.textContent = 'Something went wrong. Please try again in a moment.';
+          formStatus.className = 'form-status error';
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send message';
         });
