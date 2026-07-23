@@ -2,6 +2,7 @@
   "name": "valimia-website",
   "compatibility_date": "2026-07-20",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "not_found_handling": "404-page"
   }
 }

@@ -264,6 +264,20 @@ main.wide { max-width: 880px; }
   margin-bottom: 20px;
 }
 
+.mission-statement {
+  text-align: center;
+  padding: 8px 0 40px;
+}
+
+.mission-statement p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  line-height: 1.5;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
 .prose-section {
   background: var(--bg-card);
   border: 1px solid var(--border);

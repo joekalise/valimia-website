@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://valimia.com/</loc></url>
-  <url><loc>https://valimia.com/about/</loc></url>
-  <url><loc>https://valimia.com/apps/fibro/</loc></url>
-  <url><loc>https://valimia.com/apps/fibro/privacy/</loc></url>
-  <url><loc>https://valimia.com/apps/spondy/</loc></url>
-  <url><loc>https://valimia.com/apps/spondy/privacy/</loc></url>
-  <url><loc>https://valimia.com/blog/</loc></url>
-  <url><loc>https://valimia.com/blog/fibromyalgia-vs-ankylosing-spondylitis/</loc></url>
-  <url><loc>https://valimia.com/blog/rheumatology-appointment-prep/</loc></url>
+  <url><loc>https://valimia.com/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://valimia.com/about/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://valimia.com/apps/fibro/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://valimia.com/apps/fibro/privacy/</loc><lastmod>2026-07-20</lastmod></url>
+  <url><loc>https://valimia.com/apps/spondy/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://valimia.com/apps/spondy/privacy/</loc><lastmod>2026-07-20</lastmod></url>
+  <url><loc>https://valimia.com/blog/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://valimia.com/blog/fibromyalgia-vs-ankylosing-spondylitis/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://valimia.com/blog/rheumatology-appointment-prep/</loc><lastmod>2026-07-23</lastmod></url>
 </urlset>
