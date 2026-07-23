@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-mark.svg" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <title>Contact Valimia</title>
+  <meta name="description" content="Get in touch with Valimia, makers of Fibro and Spondy. Questions, feedback, or press enquiries welcome." />
+  <link rel="canonical" href="https://valimia.com/contact/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Valimia" />
+  <meta property="og:description" content="Get in touch with Valimia, makers of Fibro and Spondy." />
+  <meta property="og:url" content="https://valimia.com/contact/" />
+
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="brand" href="/"><img src="/assets/logo-mark.svg" class="brand-mark" alt="" />Valimia</a>
+    <div class="links">
+      <a href="/">Home</a>
+      <details class="nav-dropdown">
+        <summary>Products</summary>
+        <div class="dropdown-panel">
+          <a href="/apps/fibro/">Fibro</a>
+          <a href="/apps/spondy/">Spondy</a>
+        </div>
+      </details>
+      <a href="/about/">About</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Contact Valimia</h1>
+    <p class="tagline">Questions, feedback, or press enquiries. We read everything that comes in and typically respond within 48 hours.</p>
+  </header>
+
+  <main>
+    <div class="prose-section">
+      <form id="contact-form" class="contact-form">
+        <input type="hidden" name="access_key" value="92ab5d53-bf2c-4a7e-b6ca-0dbf0ee5567c" />
+        <input type="hidden" name="subject" value="New message from valimia.com contact form" />
+        <input type="hidden" name="from_name" value="Valimia contact form" />
+        <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off" />
+
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send message</button>
+        <p id="form-status" class="form-status" role="status"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/"><img src="/assets/logo-mark.svg" class="brand-mark" alt="" />Valimia</a>
+        <p>Apps for living with chronic illness.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="/apps/fibro/">Fibro</a>
+        <a href="/apps/spondy/">Spondy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/apps/fibro/privacy/">Fibro Privacy</a>
+        <a href="/apps/spondy/privacy/">Spondy Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Valimia</p>
+    </div>
+  </footer>
+
+  <script>
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('form-status');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      status.textContent = '';
+      status.className = 'form-status';
+
+      var data = Object.fromEntries(new FormData(form));
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (result) {
+          if (result.success) {
+            form.reset();
+            form.style.display = 'none';
+            status.textContent = "Thanks, your message has been sent. We'll get back to you soon.";
+            status.className = 'form-status success';
+          } else {
+            status.textContent = 'Something went wrong. Please try again in a moment.';
+            status.className = 'form-status error';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send message';
+          }
+        })
+        .catch(function () {
+          status.textContent = 'Something went wrong. Please try again, or email joseph.brockbank@gmail.com directly.';
+          status.className = 'form-status error';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send message';
+        });
+    });
+  </script>
+
+</body>
+</html>

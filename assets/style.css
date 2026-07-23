@@ -331,6 +331,44 @@ main.wide { max-width: 880px; }
   border-radius: 10px;
 }
 
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.contact-form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 6px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.contact-form textarea { resize: vertical; min-height: 140px; }
+.contact-form button[type="submit"] {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.contact-form button[type="submit"]:disabled { opacity: 0.6; cursor: default; }
+.form-status { font-size: 0.85rem; }
+.form-status.success { color: #16a34a; }
+.form-status.error { color: #dc2626; }
+
 /* App cards on the Valimia homepage */
 .app-cards {
   display: grid;
